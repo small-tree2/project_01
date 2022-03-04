@@ -2,73 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>登录页面</title>
-  <link rel="stylesheet" href="./login.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-  <?php
-
-@header("content-Type: text/html; charset=utf-8"); //语言强制
-
-//二维数组
-$starArr = array(
-    array('name'=>'黄','film'=>'战狼1','friend'=>'谢楠1'),
-    array('name'=>'王','film'=>'战狼2','friend'=>'谢楠2'),
-    array('name'=>'陈','film'=>'战狼3','friend'=>'谢楠3'),
-    array('name'=>'李','film'=>'战狼4','friend'=>'谢楠4'),
-);
-
-//获取内容
-echo $starArr[2]['friend'];
-
-echo '<br>';
-
-//完整输出数组
-print_r($starArr);
-
-echo '<br>';
-
-//获取长度的数组 count()
-
-//php遍历数组froeash $key 键  $value 循环的值
-
-for($i=0;$i<count($starArr);$i++){
-    echo '<br>';
-    //PHP中拼接字符串用 .
-    echo '明星'.$starArr[$i]['name'].':出演:'.$starArr[$i]['film'].'好朋友:'.$starArr[$i]['friend'].'<br>';
-}
-
-
-
-?>
-  <h1>这是登录页面</h1>
-  <h2>我在master分支修改了login.html</h2>
-  <img src="./images/loading.gif" alt="" id="imgsky">
-  <button id="btn">停止跟随</button>
-  <script>
-    $(function () {
-      var flag = null;
-      var timer;
-      $(document).on("mousemove", function (e) {
-        if (flag) {
-          return;
-        }
-        flag = setTimeout(function () {
-          $("#imgsky").css("left", e.pageX + 20 + "px").css("top", e.pageY + 20 + "px");
-          console.log(e.pageX, e.pageY);
-          flag = null;
-        }, 16);
-
-      })
-      $("#btn").on("click", function () {
-        window.clearTimeout(flag);
-      })
-
-    })
-  </script>
+  <H2>我在main上面修改了login</H2>
 </body>
 
 </html>
